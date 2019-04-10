@@ -1,0 +1,29 @@
+
+.card {
+    border: 2px solid gray;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#toparticles {
+    text-align: center;
+}
+
+.row {
+    text-align: center;
+ 
+ }
+ 
+ #header{
+    background-color: #466365;
+
+ }
+ 
+ #formDiv,#topArticlesRow,#header{
+    border-width: 1.5px;
+    border-color: gray;
+    border-style: solid;
+    margin: 5px;
+    padding: 5px;
+ }

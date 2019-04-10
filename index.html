@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NYT Archive Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container" id="header">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h1><i class="fas fa-search"></i>NYT Search</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" id="formDiv">
+                <form>
+                    <div class="form-group">
+                       <h2><label for="inputSearch">Search</label></h2>
+                        <input type="search" class="form-control" id="inputSearch" placeholder="e.g. 'nuclear war'">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="inputRecords">Number of Records to Retrieve</label>
+                        <select class="form-control" id="inputRecords">
+                            <option>1</option>
+                            <option selected="selected">5</option>
+                            <option>10</option>
+                            <option>25</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputStartYear">Start Year: (Optional)</label>
+                        <input type="search" class="form-control" id="inputStartYear" placeholder="YYYYMMDD">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEndYear">End Year: (Optional)</label>
+                        <input type="search" class="form-control" id="inputEndYear" placeholder="YYYYMMDD">
+                    </div>
+                    <button id="searchBtn" type="submit" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                    <button id="clearBtn" type="submit" class="btn btn-primary">
+                        <i class="far fa-trash-alt"></i>
+                        Clear Results
+                    </button>
+                </form>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" id="topArticlesRow"><br>
+                <h2 id="toparticles">Top Articles</h2>
+                <ol id="article-list">
+                    <!-- dynamic top article content -->
+                </ol>
+            </div>
+            <div class="col-8"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
