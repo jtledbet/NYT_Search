@@ -67,8 +67,11 @@ $("#searchBtn").on("click", function(event){
             var headline = response.docs[i].headline.main;
             var snippet = response.docs[i].snippet;
             var wordCount = response.docs[i].word_count;
-            var author = response.docs[i].byline.original;
-                if (author === null) author = "Author N/A"
+
+            if (response.docs[i].byline.original) {
+                var author = response.docs[i].byline.original;
+                    if (author === null) author = "Author N/A"
+            }
             var date = response.docs[i].pub_date;
             var pageURL = response.docs[i].web_url;
     
@@ -80,7 +83,7 @@ $("#searchBtn").on("click", function(event){
             newNode = $("<div>")
             newNode.addClass("card")
             newNodeNum = $("<h2>").text("#" + place);
-            newNodeHeader = $("<h3>").html("<a href=" + pageURL + ">" + headline + "</a>")
+            newNodeHeader = $("<h3>").html("<a target='_blank' href=" + pageURL + ">" + headline + "</a>")
             newNodeHeader.addClass("card-header")
             newNodeSnippet = $("<p>").text(snippet)
             newNodeSnippet.addClass("card-body")
