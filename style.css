@@ -6,18 +6,12 @@
     margin: 10px;
 }
 
-#toparticles {
-    text-align: center;
-}
-
 .row {
     text-align: center;
- 
  }
  
  #header{
     background-color: #466365;
-
  }
  
  #formDiv,#topArticlesRow,#header{
